@@ -2,8 +2,7 @@
 
 This is a simple Discord chat bot built using discord.js and the gpt-3.5-turbo model from Open AI. This is the same model used for the popular chatbot Chat GPT.
 
-![satanichia-log](https://user-images.githubusercontent.com/45735208/230544203-01947cab-ee40-4296-82dc-9624ae0f8553.png)
-
+![satanichia-log](https://user-images.githubusercontent.com/45735208/230545680-1cbddec9-a21c-47b9-adc0-b4108f4b27fe.png)
 
 ## How to setup
 
