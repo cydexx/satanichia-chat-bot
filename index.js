@@ -18,7 +18,8 @@ const openai = new OpenAIApi(configuration)
 client.on("messageCreate", async (message) => {
     if (message.author.bot) return
     if (message.channel.id !== process.env.CHANNEL_ID) return
-    //if (message.content.startsWith("!") || message.content.startsWith(".")) return //enable it if you don't want to use specific channel setup.
+    if (message.content.startsWith("!") || message.content.startsWith("."))
+        return //enable it if you don't want to use specific channel setup.
 
     let conversationLog = [
         { role: "system", content: "You are a friendly chatbot." },
@@ -45,13 +46,20 @@ client.on("messageCreate", async (message) => {
             .createChatCompletion({
                 model: "gpt-3.5-turbo",
                 messages: conversationLog,
-                max_tokens: 256, // limit token usage
+                //max_tokens: 256, // limit token usage
             })
             .catch((error) => {
                 console.log(`OPENAI Error: ${error}`)
             })
 
         message.reply(result.data.choices[0].message)
+        console.log(
+            message.author.username,
+            ":\nQ:",
+            message.content,
+            "\nA:",
+            result.data.choices[0].message.content
+        ) //console logging every questions with username and q&a prompts
     } catch (error) {
         console.log(`Error: ${error}`)
     }
