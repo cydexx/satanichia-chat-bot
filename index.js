@@ -97,5 +97,5 @@ client.on("ready", () => {
   ⢄⡀⠀⢃⠎⢤⡉⢆⠻⣿⣿⣿⣿⣿⣿⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⠟⠁⠀⣼⣿⣿⣿⣯⣷⣹⣵⣿⣿⢛⠀⠀⠀⠀
   ⠢⠜⡐⢌⡸⢄⠚⡄⠣⢌⠻⣿⣿⣿⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣴⠟⠁⠀⠀⢠⣟⣿⣿⣿⣿⣿⣿⣿⡿⢁⠂⠀⠀⠀⠀
 
-         Satanichia AI-BOT ready to serve.`)
+         Satanichia Chat Bot ready to serve.`)
 })
