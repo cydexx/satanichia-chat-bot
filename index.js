@@ -65,8 +65,6 @@ client.on("messageCreate", async (message) => {
     }
 })
 
-//const logPromptsToConsole = () => { } //!TO-DO: get prompts and log to console.
-
 client.login(process.env.TOKEN)
 
 client.on("ready", () => {
