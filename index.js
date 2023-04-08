@@ -58,7 +58,8 @@ client.on("messageCreate", async (message) => {
             ":\nQ:",
             message.content,
             "\nA:",
-            result.data.choices[0].message.content
+            result.data.choices[0].message.content,
+            "\n--------------------------------"
         ) //console logging every questions with username and q&a prompts
     } catch (error) {
         console.log(`Error: ${error}`)
@@ -67,7 +68,10 @@ client.on("messageCreate", async (message) => {
 
 client.login(process.env.TOKEN)
 
-client.on("ready", () => {
+client.on("ready", (client) => {
+    client.channels
+        .fetch(process.env.CHANNEL_ID)
+        .then((channel) => channel.send(`（’へ ’）I'm ready to serve.`))
     console.log(` 
   ⠀⠀⡜⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⢣⣖⠠⠛⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡷⠀⠉⢷⡀⠀⠈⢧⠱⡄⠀⠙⣿⣯⠀
   ⠀⠀⡜⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣷⠃⠈⢧⡃⢜⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣏⠀⠀⠀⠙⢆⠀⠈⣷⢱⡀⠀⠘⢿⣇
